@@ -82,11 +82,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "author", content: "Umar Ali" },
       { name: "keywords", content: "AI Engineer, Machine Learning Engineer, Deep Learning, Computer Vision, RAG, LangChain, LangGraph, Generative AI, Python Developer, Umar Ali" },
       { property: "og:title", content: "Umar Ali — AI Engineer & ML Specialist" },
-      { property: "og:description", content: "Generative AI, RAG systems, and Deep Learning engineer building production intelligent systems." },
+      { property: "og:description", content: "Umar Ali — AI Engineer specializing in Generative AI, RAG systems, Deep Learning, and Computer Vision. Building production intelligent systems with LangChain, TensorFlow, and FastAPI." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Umar Ali — AI Engineer" },
-      { name: "twitter:description", content: "Generative AI, RAG, and Deep Learning engineer." },
+      { name: "twitter:title", content: "Umar Ali — AI Engineer & ML Specialist" },
+      { name: "twitter:description", content: "Umar Ali — AI Engineer specializing in Generative AI, RAG systems, Deep Learning, and Computer Vision. Building production intelligent systems with LangChain, TensorFlow, and FastAPI." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/57f156d8-a85d-4159-af22-057fb550107c/id-preview-c581de92--3d08c363-c00c-4cda-ba3e-99088307f834.lovable.app-1781945950499.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/57f156d8-a85d-4159-af22-057fb550107c/id-preview-c581de92--3d08c363-c00c-4cda-ba3e-99088307f834.lovable.app-1781945950499.png" },
     ],
     links: [
       {
