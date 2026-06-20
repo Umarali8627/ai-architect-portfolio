@@ -18,7 +18,7 @@ const projects: Project[] = [
     title: "EYE LAB — Eye Disease Classifier",
     blurb:
       "Real-time fundus image classification using VGG19 and MobileNetV2. Transfer learning + augmentation, deployed as a Flask REST service for clinical use.",
-    tags: ["TensorFlow", "VGG19", "MobileNetV2", "Flask", "Transfer Learning"],
+    tags: ["TensorFlow", "VGG19", "MobileNetV2", "FastAPI", "Transfer Learning"],
     github: "https://github.com/Umarali8627/Eye_disease_Classifier_VGG",
     featured: true,
     accent: "from-blue-500/30 to-violet-500/30",
@@ -33,6 +33,7 @@ const projects: Project[] = [
     featured: true,
     accent: "from-violet-500/30 to-fuchsia-500/30",
     metric: "+35% retrieval",
+   
   },
   {
     title: "Conversational Chatbot with Memory",

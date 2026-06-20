@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { ArrowRight, Download, Mail, Github, Sparkles } from "lucide-react";
-import portraitAsset from "@/assets/umar-profile.png.asset.json";
-const portrait = portraitAsset.url;
+import portrait from "@/assets/UmarAli.png";
 
 const phrases = [
   "Building Intelligent Systems with AI",
@@ -43,7 +42,6 @@ function Typewriter() {
 }
 
 function NeuralBackdrop() {
-  // Deterministic nodes for SSR safety
   const nodes = Array.from({ length: 22 }, (_, i) => {
     const x = ((i * 137.5) % 100);
     const y = ((i * 73.3) % 100);
@@ -98,6 +96,7 @@ export function Hero() {
     <section id="top" className="relative flex min-h-screen items-center pt-28 pb-20">
       <NeuralBackdrop />
       <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-4 md:grid-cols-[1.2fr_1fr]">
+        {/* ── Left: text content ── */}
         <div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -179,36 +178,61 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.5 }}
             className="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-xs text-muted-foreground"
           >
-            <a href="https://github.com/Umarali8627" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:text-foreground">
+            <a
+              href="https://github.com/Umarali8627"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 hover:text-foreground"
+            >
               <Github className="h-3.5 w-3.5" /> github.com/Umarali8627
             </a>
-            <span className="inline-flex items-center gap-2"><Sparkles className="h-3.5 w-3.5" /> 2+ years · 15+ projects shipped</span>
+            <span className="inline-flex items-center gap-2">
+              <Sparkles className="h-3.5 w-3.5" /> 2+ years · 15+ projects shipped
+            </span>
           </motion.div>
         </div>
 
+        {/* ── Right: circular portrait ── */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative mx-auto w-full max-w-sm"
+          className="relative mx-auto w-full max-w-[300px]"
         >
-          <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-[var(--accent-blue)]/40 via-transparent to-[var(--accent-violet)]/40 blur-2xl" />
-          <div className="relative overflow-hidden rounded-[1.75rem] border border-border card-premium">
+          {/* Glow ring behind the circle */}
+          <div className="absolute -inset-4 rounded-full bg-gradient-to-br from-[var(--accent-blue)]/40 via-transparent to-[var(--accent-violet)]/40 blur-2xl" />
+
+          {/* Decorative spinning border ring */}
+          <div
+            className="absolute -inset-[3px] rounded-full"
+            style={{
+              background:
+                "conic-gradient(from 0deg, oklch(0.7 0.18 265), oklch(0.7 0.18 200), oklch(0.7 0.18 265))",
+              animation: "spin 8s linear infinite",
+            }}
+          />
+
+          {/* White gap between spinning ring and image */}
+          <div className="absolute inset-[2px] rounded-full bg-background" />
+
+          {/* Circular image */}
+          <div className="relative overflow-hidden rounded-full aspect-square border border-border">
             <img
               src={portrait}
               alt="Umar Ali, AI Engineer"
-              width={896}
-              height={1152}
-              className="aspect-[7/9] w-full object-cover"
+              className="w-full h-full object-cover object-top"
             />
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/80 via-background/0 to-background/0" />
-            <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between rounded-xl glass px-3 py-2 text-xs">
-              <div>
-                <div className="font-medium text-foreground">Umar Ali</div>
-                <div className="text-muted-foreground">Peshawar, PK</div>
-              </div>
-              <div className="font-mono text-[10px] text-muted-foreground">v2026.1</div>
-            </div>
+            {/* Subtle bottom fade */}
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent" />
+          </div>
+
+          {/* Name badge below the circle */}
+          <div className="mt-4 flex items-center justify-center gap-2 rounded-xl glass border border-border px-4 py-2 text-xs">
+            <div className="font-medium text-foreground">Umar Ali</div>
+            <span className="text-muted-foreground">·</span>
+            <div className="text-muted-foreground">Nowshera, PK</div>
+            <span className="text-muted-foreground">·</span>
+            <div className="font-mono text-[10px] text-muted-foreground">v2026.1</div>
           </div>
         </motion.div>
       </div>
