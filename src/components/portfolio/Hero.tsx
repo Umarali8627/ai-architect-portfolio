@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { ArrowRight, Download, Mail, Github, Sparkles } from "lucide-react";
-import portrait from "@/assets/umar-portrait.jpg";
+import portraitAsset from "@/assets/umar-profile.png.asset.json";
+const portrait = portraitAsset.url;
 
 const phrases = [
   "Building Intelligent Systems with AI",
