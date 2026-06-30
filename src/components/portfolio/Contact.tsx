@@ -68,7 +68,7 @@ export function Contact() {
             {[
               { icon: Mail,    label: "myumarali12@gmail.com",      href: "mailto:myumarali12@gmail.com" },
               { icon: Github,  label: "github.com/Umarali8627",      href: "https://github.com/Umarali8627" },
-              { icon: Linkedin,label: "Connect on LinkedIn",         href: "https://www.linkedin.com/umarali8627" },
+              { icon: Linkedin,label: "Connect on LinkedIn",         href: "https://www.linkedin.com/in/umarali8627" },
               { icon: Phone,   label: "+92 334 5005212",             href: "tel:+923345005212" },
               { icon: MapPin,  label: "Peshawar, Pakistan",          href: "#" },
             ].map((c) => (
